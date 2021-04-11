@@ -105,28 +105,23 @@ function displayGrid(display) {
   const grid = document.getElementById("grid");
   if (display) {
     Dinos.forEach((dino, index) => {
-      compareHeightWith(dino);
+      const facts = [
+        compareHeightWith(dino),
+        compareWeightWith(dino),
+        compareDietWith(dino),
+        dino.getFact(),
+      ];
+      const random = Math.floor(Math.random() * 4);
       if (index === 4) {
         grid.innerHTML += `<div class="grid-item">
-        <h3>${human.name}(You)</h3>
+        <h3>${human.name}</h3>
         <img src="./images/human.png" />
-        <ul>
-            <li>${human.heightFeet + "." + human.heightDeciInchs} Feet</li>
-            <li>${human.weight + "lbs"}</li>
-            <li>${human.diet}</li>
-        </ul>
-        <p>You</p>
       </div>`;
       }
       grid.innerHTML += `<div class="grid-item">
         <h3>${dino.getSpecies()}</h3>
         <img src="./images/${dino.getSpecies().toLowerCase()}.png" />
-        <ul>
-            <li>${compareHeightWith(dino)}</li>
-            <li>${compareWeightWith(dino)}</li>
-            <li>${compareDietWith(dino)}</li>
-        </ul>
-        <p>${dino.getFact()}</p>
+        <p>${index === Dinos.length - 1 ? dino.getFact() : facts[random]}</p>
       </div>`;
     });
   } else {
