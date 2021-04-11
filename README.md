@@ -1,11 +1,19 @@
-# Object Oriented Javascript 
+# Project Dinosurs: Object Oriented Javascript 
 
-See the live preview of this project : https://dinosaurs-ijs.vercel.app/
+#### Live preview of this project : https://dinosaurs-ijs.vercel.app/
 
-### Big Picture
-For the project, you will generate a 3x3 grid of tiles (9 in total) with the human in the center tile. Each title will contain the species, an image, and a fact. For the human tile, you will display the name of the human rather than species and no fact is necessary for the human. When the user clicks to generate the infographic from the form, the grid will appear and the form will be hidden. The facts displayed should be random per dinosaur with an opportunity of displaying at least 6 different types of facts (3 should be from the methods you create). One of the titles should be for a pigeon in which the tile should always display, “All birds are considered dinosaurs.”
+This Project is developed as part of assignmennt for lesson Object Oriented Javascript in Udacity Intermediate JavaScript nano degree program.
 
-### Project Requirements
+### Project Description
+This project has a form to enter Human details and these details are used to generate the facts comparing with the dinosurs available. 
+
+#### Tech Stack 
+HTML 5, CSS 3 & JS
+
+#### Instructions
+Open the index.html after cloning or downloading. 
+
+#### Project Requirements
 
 To complete this project, your UI must show the following:
 
